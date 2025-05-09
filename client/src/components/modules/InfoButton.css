@@ -1,0 +1,36 @@
+.info-icon {
+  background-color: var(--primary);
+  border: 2px solid var(--cream);
+  border-radius: 50%;
+  color: var(--cream);
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.info-icon:hover {
+  background: var(--cream);
+  color: var(--primary);
+}
+
+.info-instructions {
+  position: absolute;
+  top: 100px; /* Positions the instructions right below the button */
+  right: 20px; /* Aligns the instructions to the left of the button */
+  background-color: var(--darkcream);
+  border-radius: var(--s);
+  padding: 30px;
+  width: 25%; /* or should we do it absolute? */
+  text-align: left;
+  line-height: 1.4;
+  z-index: 100000;
+}
+
+.info-instructions p {
+  margin: 5px 0;
+  color: var(--darkbrown);
+  font-family: var(--body-font);
+}

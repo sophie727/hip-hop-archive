@@ -1,0 +1,152 @@
+.AddArticle-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.AddArticle-title,
+.AddArticle-image {
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--darkcream);
+  box-shadow: 0 2px 5px var(--darkcream);
+  font-family: var(--body-font);
+}
+
+.AddArticle-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.AddArticle-textarea {
+  padding: 12px;
+  font-size: 1em;
+  font-family: var(--body-font);
+  border: 1px solid var(--darkcream);
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.AddArticle-doubleInput {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.AddArticle-plusContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.AddArticle-AddButton {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.AddArticle-AddButton:hover {
+  background-color: var(--primary--dim);
+  box-shadow: 0 2px 2px var(--darkbrown);
+}
+
+.AddArticle-popup {
+  position: absolute;
+  top: 50px;
+  background: var(--cream);
+  border: 1px solid var(--darkcream);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+}
+
+.AddArticle-popup button {
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  text-align: left;
+}
+
+.AddArticle-popup button:hover {
+  background-color: var(--darkcream);
+  color: white;
+}
+
+.AddArticle-post {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  font-family: var(--body-font);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.2s ease;
+}
+
+.AddArticle-post:hover {
+  background-color: var(--primary--dim);
+}
+
+.AddArticle-blockWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.AddArticle-removeButton {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--darkcream);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddArticle-removeButton:hover {
+  background: var(--darkbrown);
+}
+
+.AddArticle-headerInput {
+  font-size: 1em;
+  padding: 6px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--darkcream);
+  box-shadow: 0 2px 5px var(--darkcream);
+  font-family: var(--body-font);
+}
+
+.AddArticle-headerInput:focus {
+  border-color: var(--darkbrown);
+}

@@ -1,0 +1,43 @@
+.resources-container {
+  padding: var(--l);
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+.resources-header {
+  padding: var(--l) var(--m);
+  margin-bottom: var(--l);
+}
+
+.resources-subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-top: var(--s);
+}
+
+.resources-section {
+  margin-top: var(--l);
+  padding-top: var(--m);
+  border-top: 1px solid var(--darkcream);
+}
+
+.resources-section h2 {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  margin-bottom: var(--s);
+  color: var(--darkbrown);
+}
+
+.resources-section h3 {
+  font-size: 1.25rem;
+  margin-top: var(--m);
+  color: var(--primary);
+}
+
+.resources-section ul {
+  list-style-type: disc;
+  padding-left: var(--m);
+  line-height: 1.6;
+}

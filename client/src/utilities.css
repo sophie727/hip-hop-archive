@@ -1,0 +1,152 @@
+/**
+* Welcome to your ✨𝔲𝔱𝔦𝔩𝔦𝔱𝔶 𝔰𝔱𝔶𝔩𝔢𝔰✨!
+* This file includes utility classes that are super simple
+* and can be used to add general styles; variable definitions
+* for colors; and styles to html, body, and other high level
+* DOMs.
+*
+* All utility classes start with a `u-` and all do
+* one basic CSS thing (for example, making the font-weight
+* 600 for bolding) or are super generic.
+*
+* This is 𝙉𝙊𝙏 the place to define classes for components or
+* do rigorous styling. You shoud not need to change this file
+* much after initial creation.
+*/
+
+/* TODO: REPLACE WITH YOUR OWN FONT! */
+/* @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap"); */
+@import url("https://use.typekit.net/gjr2qxs.css"); /* Inknut Antiquat */
+@import url("https://use.typekit.net/gjr2qxs.css"); /* Montserrat */
+
+:root {
+  --primary: #2c6e49;
+  --primary--dim: #4c956c; /* hover color */
+  --secondary: #7c3e11;
+  --darkbrown: #281d04;
+  --cream: #f4f1ec;
+  --darkcream: #dad7d3;
+  /*--white: #f7eee0f0;*/
+  --text-color: #000000;
+
+  --header-font: "inknut-antiqua";
+  --body-font: "montserrat";
+
+  --xs: 4px;
+  --s: 8px;
+  --m: 16px;
+  --l: 24px;
+
+  --navbark-z: 10000;
+  --popup-z: 1000;
+  --below-popup-z: 100;
+}
+
+.dark-mode {
+  --primary: #4a9e86; /* Change to a lighter shade for dark mode */
+  --primary--dim: #2c6e49; /* Adjusted hover color for dark mode */
+  --secondary: #d86f35; /* Adjusted for dark mode */
+  --darkbrown: #f3e3e3; /* Darker brown for dark mode */
+  --cream: #181818; /* Dark background for dark mode */
+  --darkcream: #222222; /* Lighter dark background for dark mode */
+  --text-color: #e0e0e0; /* Lighter text color for dark mode */
+}
+
+body.dark-mode {
+  background-color: var(--cream); /* Apply dark background */
+  color: var(--text-color); /* Lighter text for dark mode */
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font), sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(40px, 10vw, 70px);
+  margin: 0px;
+  margin-top: var(--l);
+  color: var(--darkbrown);
+  overflow-wrap: break-word;
+  line-height: clamp(50px, 12vw, 100px);
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+form {
+  flex-grow: 1;
+}
+
+input {
+  font-family: var(--body-font);
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-flex-justifyCenter {
+  justify-content: center;
+}
+
+.u-flex-alignCenter {
+  align-items: center;
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}
+
+.u-bold {
+  font-weight: 600;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
+
+.u-link {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.u-link:hover {
+  color: var(--primary--dim);
+}

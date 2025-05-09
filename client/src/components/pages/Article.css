@@ -1,0 +1,84 @@
+.Article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: var(--text-color);
+}
+
+.Article-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.Article-meta {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.Article-header-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.Article-content {
+  line-height: 1.6;
+}
+
+.Article-content-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Article-content-paragraph {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.Article-content-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.Article-content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.Article-content-source {
+  margin-bottom: 1.5rem;
+}
+
+.Article-content-source a {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--text-color); /* or use an explicit color if needed */
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.Article-content-source a:hover {
+  color: var(--secondary); /* or whatever hover color you want */
+}
+
+.Article-updated {
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.Article-loading {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+}

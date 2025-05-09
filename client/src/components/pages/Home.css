@@ -1,0 +1,78 @@
+.home {
+  text-align: center;
+  padding: 20px;
+  font-family: var(--header-font);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--cream);
+  color: var(--text-color);
+  z-index: 0; /* behind everything */
+}
+
+.Home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 2; /* Ensures content (like buttons) are above the background and image */
+}
+
+.Home-title {
+  z-index: 2;
+  color: var(--text-color);
+  background-color: var(--cream);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.login-container {
+  margin-top: 0;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  z-index: 3; /* Ensure the login button stays on top */
+}
+
+.login-container:hover {
+  box-shadow: 0 1px 5px 3px var(--darkbrown);
+  transform: scale(1.05);
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 5;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.home-articles-button {
+  background-color: #f44336; /* same as logout-button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px; /* small spacing under login button */
+  z-index: 5;
+}
+
+.home-articles-button:hover {
+  background-color: #d32f2f; /* same hover color as logout-button */
+  transform: scale(1.05); /* same hover grow effect */
+  box-shadow: 0 1px 5px 3px var(--darkbrown);
+}

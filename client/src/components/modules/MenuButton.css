@@ -1,0 +1,34 @@
+.MenuButton-container {
+  display: inline-block;
+  padding: 10px 10px;
+}
+
+.MenuButton-container:hover {
+  cursor: pointer;
+}
+
+.MenuButton-bar {
+  width: 32px;
+  height: var(--xs);
+  background-color: var(--cream);
+  border-radius: 10px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .MenuButton-bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change .MenuButton-bar2 {
+  opacity: 0;
+}
+
+.change .MenuButton-bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
+/* upon hover, */
+.MenuButton-container:hover .MenuButton-bar {
+  background-color: rgb(222, 222, 222);
+}

@@ -1,0 +1,156 @@
+.Articles-addmode:not(.Articles-addpopup) {
+  /* disable interactions with the background when popup open */
+  pointer-events: none;
+  position: relative;
+}
+
+.Articles-Container {
+  text-align: center;
+  max-width: 100%;
+  position: relative;
+  z-index: 0; /* behind the popup */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Articles-ArticleList {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to multiple rows */
+  gap: 16px;
+  justify-content: center; /* Center the items */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.Articles-SingleProjectContainer {
+  background: var(--primary);
+  border-radius: 40px;
+  margin: var(--m);
+  width: calc(40% - 16px); /* two columns with a gap */
+  aspect-ratio: 3 / 1; /* maintains proper dimension */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease; /* Smooth scaling */
+}
+
+.Articles-SingleProjectContainer:hover {
+  background: var(--primary--dim);
+  transform: scale(1.05);
+}
+
+/* Image */
+.Articles-image {
+  width: 20%; /* relative to the container's width */
+  max-width: 120px; /* prevents the flower from being too large */
+  flex-shrink: 0;
+  transition: width 0.2s ease, height 0.2s ease; /* smooth resizing */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.Articles-SingleProjectName {
+  color: var(--cream);
+  font-size: clamp(12px, 2vw, 24px); /* responsive font size */
+  text-align: center;
+}
+
+.Articles-SearchBar {
+  width: 100%;
+  /*max-width: 500px;*/
+  padding: 10px 15px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  font-family: var(--body-font);
+  border: 1px solid var(--darkcream);
+  border-radius: 25px;
+  box-shadow: 0 2px 5px var(--darkcream);
+  transition: all 0.3s ease;
+
+  flex: 1 1 200px; /* Grow, shrink, minimum width */
+  max-width: 100%; /* Remove fixed max-width if necessary */
+  min-width: 0;
+}
+
+.Articles-SearchAndAdd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  gap: 10px;
+}
+
+.Articles-AddButton {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.Articles-AddButton:hover {
+  background-color: var(--primary--dim);
+  box-shadow: 0 2px 2px var(--darkbrown);
+}
+
+.Articles-SearchBar:focus {
+  outline: none;
+  border: 0.5px var(--primary) solid;
+}
+
+/* Ensure AddTreePopup is interactive */
+.AddTreePopup-all {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--popup-z); /* Ensure it's above other content */
+  pointer-events: auto; /* Allow pointer events on the popup */
+}
+
+.Articles-wind-left {
+  position: absolute;
+  top: -50px;
+  left: -80px;
+  transform: rotate(-90deg);
+  width: 600px;
+  height: 600px;
+  z-index: -5;
+}
+
+.Articles-wind-right {
+  transform: rotate(-270deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -160px;
+  right: -100px;
+  z-index: -5;
+}
+
+.Articles-Titletext {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  /*background-color: var(--cream);*/
+  border-radius: 20px;
+}

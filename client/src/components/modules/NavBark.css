@@ -1,0 +1,182 @@
+.NavBark-container {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  padding: var(--s) var(--m);
+  border-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--navbark-z);
+  background-color: var(--primary);
+  overflow: hidden; /* help with truncation */
+}
+
+.NavBark-Link-dimmed {
+  cursor: default;
+}
+
+.NavBark-title {
+  color: var(--cream);
+  font-size: clamp(12px, 2.5vw, 20px);
+  font-family: var(--header-font);
+  text-decoration: none;
+  transition: color 0.5s ease;
+  pointer-events: auto;
+  z-index: 1;
+
+  /* Remove absolute/transform */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1; /* Take available space */
+  text-align: center;
+  min-width: 0; /* CRITICAL for flex-based truncation */
+}
+
+.NavBark-title:hover {
+  color: white;
+}
+
+/* .menu-container {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+
+  padding: 3%;
+
+  background: radial-gradient(65.94% 65.94% at 50% 50%, #ffffff 0%, #2c6e49 100%);
+  border: 0px;
+
+  z-index: 1000;
+} */
+.menu-container {
+  position: fixed;
+  top: 75px; /* Match the navbar height */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px); /* Use percentage-based height */
+  padding: 0;
+  background: var(--cream);
+  overflow: hidden;
+  z-index: var(--navbark-z);
+}
+
+.menu-line {
+  margin-bottom: 32px;
+  width: 50%;
+  border: 2px solid var(--darkbrown);
+  border-radius: 10px;
+}
+.menu-item,
+.menu-item:visited {
+  display: block;
+  font-size: clamp(20px, 4vw, 40px);
+  /* font-size: clamp(20px, 4vw, 40px); */
+  color: var(--darkbrown);
+  text-decoration: none;
+  margin: clamp(15px, 3.5vw, 30px);
+  transition: 0.5s;
+  height: clamp(30px, 4.5vw, 50px);
+  /* height: clamp(30px, 4vw, 50px);*/
+}
+
+.menu-item:hover {
+  font-size: clamp(25px, 4vw, 45px);
+  /* font-size: clamp(30px, 4vw, 50px);*/
+}
+
+/*
+.menu-fade {
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+} */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.NavBark-icon {
+  width: 20px;
+}
+
+.NavBark-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.NavBark-wind-left,
+.NavBark-wind-right {
+  width: 1000px;
+  height: auto;
+  z-index: 10000;
+  position: absolute;
+}
+
+.NavBark-wind-left {
+  top: 50px;
+  left: -100px;
+  transform: rotate(-90deg);
+  width: 500px;
+  height: 500px;
+}
+
+.NavBark-wind-right {
+  top: -60px;
+  right: -100px;
+  transform: rotate(-270deg);
+  width: 500px;
+  height: 500px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}

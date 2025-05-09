@@ -1,0 +1,38 @@
+.about-container {
+  padding: var(--l);
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+.about-hero {
+  text-align: center;
+  padding: var(--l) var(--m);
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: var(--m);
+  max-width: 700px;
+}
+
+.about-section {
+  margin-top: var(--l);
+  padding-top: var(--m);
+  border-top: 1px solid var(--darkcream);
+}
+
+.about-section h2 {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  margin-bottom: var(--s);
+  color: var(--darkbrown);
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
